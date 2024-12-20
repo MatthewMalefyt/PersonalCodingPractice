@@ -2,14 +2,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Follow the steps below to use this file
-
-// 1. In main file add the following include 
-// #include "NewFile1.cpp"
-
-// 2. Add the following in the code
-// sayHelloFromNewFile1();
-
 // An optimized version of Bubble Sort 
 void bubbleSort(int arr[], int n) {
     bool swapped;
