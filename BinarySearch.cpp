@@ -28,12 +28,6 @@ int binarySearch(int arr[], int size, int targetVal) {
 
 int main() {
   
-    FizzBuzz();
-    cout << endl; 
-       
-    bubbleSort();
-    cout << endl; 
-  
     // Initialize the array and target value
     int myArray[] = {1, 2, 3, 5, 8, 6};
     int myTarget;
