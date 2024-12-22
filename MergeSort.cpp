@@ -17,7 +17,7 @@ void merge(int arr[], int left, int mid, int right) {
         leftArr[i] = arr[left + i];
     for (int j = 0; j < n2; j++)
         rightArr[j] = arr[mid + 1 + j];
-
+ 
     // Merge the temporary arrays back into arr[left..right]
     int i = 0, j = 0, k = left;
     while (i < n1 && j < n2) {
@@ -63,9 +63,9 @@ void mergeSort(int arr[], int left, int right) {
 
 int main() {
     int arr[] = {12, 11, 13, 5, 6, 7};
-    int n = sizeof(arr) / sizeof(arr[0]);  // Calculate the number of elements in the array
+    int n = sizeof(arr) / sizeof(arr[0]);  // Calculate the number of elements in the array (built-in function)
 
-    // Sorting arr using mergesort
+    // Sorting array using mergesort
     mergeSort(arr, 0, n - 1);
 
     // Output the sorted array
