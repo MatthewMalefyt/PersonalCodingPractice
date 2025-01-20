@@ -10,7 +10,7 @@ class MatthewsClass {
         void setName(string x) {    //function to allow for the name to be changed (set to x)
             name = x;
         }
-        string getName() {          //function to get the name from the private class
+        string getName() {          //function to get the name from the private class (make private class accessible)
             return name;
         }
     private:                        //private variables can only be accessed inside the class
@@ -21,8 +21,8 @@ int main()
 {
 
     MatthewsClass MatthewsObject ();                   //creating object to access stuff inside of class
-    MatthewsObject.setName("Sir Matthew Malefyt");  //object.function to access inside of function setName
-    cout << MatthewsObject.getName();               //object.function to access inside of function getName which connects to private class
+    MatthewsObject.setName("Sir Matthew Malefyt");      //object (dot operator) function to access inside of function setName
+    cout << MatthewsObject.getName();                   //object (dot operator) function to access inside of function getName which connects to private class
 
 
   
