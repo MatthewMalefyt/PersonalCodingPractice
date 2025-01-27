@@ -1,0 +1,150 @@
+Python Practice
+import operator
+
+character_name = "Max"
+print("There once was a man named " + character_name)
+
+character_name = "matthew"
+print((character_name.index("h")))
+print(character_name.replace("ew", "hat"))
+#len = function for length (ex: len(variable_name))
+#[] for isolating value at specified index (ex: variable_name[2])
+#index = function for counting (ex: variable_name.index)
+
+from math import *
+my_num = -100
+print(pow(my_num, 3))
+print(ceil(4.5))
+print(floor(4.5))
+
+
+#lists - a structure that can store information
+#mutable - can change
+numbers = [23, 2, 1, 43, 7]
+friends = ["Mark", "Matthew", "Luke", "John"]
+print(friends[1:3])
+#[#:#] - include number between left and right number (not including number)
+friends.sort()
+friends.reverse()
+print(friends)
+numbers.sort()
+print(numbers)
+
+#tuples - a structure that can store information
+#syntax - ex:coordinates = (4,5)
+#immutable - can't be changed (think c++ constants)
+coordinates = (66, 34)
+print(coordinates[0])
+
+
+#functions
+#code must be indented to count inside of function
+
+
+#return takes value in function to outside of code
+def sayhi(name):
+    print(name)
+
+
+def max_num(num1, num2, num3):
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+print(max_num(2, 9, 3))
+
+
+
+for letter in "Giraffe Academy":
+    print(letter)
+
+friends = ["Halpert", "Mark", "Matthew"]
+for index in range(7):
+    print(friends)
+
+for index in range(1):
+    print(index)
+    if index == 0:
+        print("first iteration\n")
+
+
+#exponent function
+def raise_to_power(base_num, pow_num):
+    result = 1
+    for index in range(pow_num):
+        result = result * base_num
+    return result
+
+
+print(raise_to_power(2, 4))
+
+#2D Lists (Grid with columns and rows
+number_grid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [0]
+]
+
+print(number_grid[2][2])  #row then column
+for row in number_grid:
+    for col in row:  #take step inside of 2D list to print values
+        print(col)
+
+print("You are what you do")
+
+
+#How to build a translator
+#TODO: vowels -> g
+def translate(phrase):
+    translation = ""
+    for letter in phrase:
+        if letter in "AEIOUaeiou":
+            if letter.isupper():
+                translation = translation + "G"
+            else:
+                translation = translation + "g"
+        else:
+            translation = translation + letter
+    return translation
+
+
+#print(translate(input("Enter a phrase: ")))
+
+try:
+    answer = 10/0
+    number = int(input("Enter a number: "))
+    print(number)
+#do not have except by itself (too vague)
+#except [specific error]
+except ZeroDivisionError:
+    print("Divided by zero")
+except ValueError:
+    print("Invalid input")
+
+
+Test_file = open("Test.txt", "a")
+Test_file.write("Toby - Human Resources")
+print(Test_file.readable()) #test if file is readable
+print("\n ")
+# Open the file for reading
+with open("Test.txt", "r") as file:
+    # Read the entire file content
+    content = file.read() #readlines()[0] for singular line
+    print(content)
+
+#print(Test_file.read)
+#open("Test.py", "r+")
+#open("Test.py", "w") //overwrites existing file or creates new file
+#open("Test.py", "a")
+
+import UsefulTools
+
+print(UsefulTools.roll_dice(10))
+
+a, b = 0, 1
+while a < 1000:
+    print(a, end=',')
+    a, b = b, a+b
